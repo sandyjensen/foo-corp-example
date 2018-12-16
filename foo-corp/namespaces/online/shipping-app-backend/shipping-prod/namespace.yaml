@@ -6,3 +6,5 @@ metadata:
     env: prod
   annotations:
     audit: "true"
+    nomos.dev/cluster-selector: selector-env-prod
+
