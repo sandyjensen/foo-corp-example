@@ -2,6 +2,8 @@ kind: ResourceQuota
 apiVersion: v1
 metadata:
   name: quota
+  annotations:
+    nomos.dev/cluster-selector: selector-env-prod
 spec:
   hard:
     pods: "3"
