@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: quota
   annotations:
-    nomos.dev/cluster-selector: selector-env-prod
+    nomos.dev/cluster-selector: selector-env-dev
 spec:
   hard:
     pods: "3"
