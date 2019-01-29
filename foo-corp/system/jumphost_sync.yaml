@@ -1,0 +1,11 @@
+kind: Sync
+apiVersion: nomos.dev/v1alpha1
+metadata:
+  name: jumphosts
+spec:
+  groups:
+    - group: ""
+      kinds:
+      - kind: Pod
+        versions:
+          - version: v1
