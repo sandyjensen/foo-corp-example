@@ -2,10 +2,9 @@ kind: ResourceQuota
 apiVersion: v1
 metadata:
   name: quota
-  namespace: 
 spec:
   hard:
-    pods: "3"
-    cpu: "1"
-    memory: 1Gi
+    pods: "1"
+    cpu: "200m"
+    memory: 100Mi
 
