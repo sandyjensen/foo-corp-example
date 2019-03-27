@@ -6,6 +6,6 @@ metadata:
 spec:
   hard:
     pods: "1"
-    cpu: "100m"
+    cpu: "200m"
     memory: 100Mi
 
