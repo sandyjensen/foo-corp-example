@@ -3,6 +3,4 @@ kind: Namespace
 metadata:
   name: random-namespace-g8r-test
   labels:
-          #    owner: foobar.agilebank.demo
-    owner: foo
-    bar: bas
+    owner: foobar.agilebank.demo
