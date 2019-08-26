@@ -5,3 +5,4 @@ metadata:
   labels:
           #    owner: foobar.agilebank.demo
     owner: foo
+    bar: bas
