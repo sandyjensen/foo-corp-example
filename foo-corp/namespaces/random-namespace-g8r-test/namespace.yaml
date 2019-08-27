@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: random-namespace-g8r-test
-  labels:
-    owner: foobar.agilebank.demo
