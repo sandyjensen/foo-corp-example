@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: shipping-test
-  annotations:
-    configmanagement.gke.io/cluster-selector: config-connector-golden-cluster
