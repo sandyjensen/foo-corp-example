@@ -1,0 +1,8 @@
+kind: ClusterSelector
+apiVersion: configmanagement.gke.io/v1
+metadata:
+  name: config-connector-golden-cluster
+spec:
+  selector:
+    matchLabels:
+      configConnectorGoldenCluster: "me"
