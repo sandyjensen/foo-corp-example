@@ -3,7 +3,7 @@ kind: K8sRequiredLabels
 metadata:
   name: all-must-have-owner
 spec:
-  enforcementAction: dryrun
+  enforcementAction: deny
   match:
     kinds:
       - apiGroups: [""]
@@ -12,4 +12,4 @@ spec:
     message: "All namespaces must have an `owner` label that points to your company username"
     labels:
       - key: owner
-        allowedRegex: "^[a-zA-Z]+.agilebank.demo$"
+        allowedRegex: "^[a-zA-Z]+$"
