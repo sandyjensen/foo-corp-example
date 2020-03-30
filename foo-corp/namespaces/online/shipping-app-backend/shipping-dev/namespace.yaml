@@ -1,3 +1,5 @@
+# comment here
+---
 apiVersion: v1
 kind: Namespace
 metadata:
