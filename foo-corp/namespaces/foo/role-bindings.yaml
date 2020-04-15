@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
   labels:
     app: istio-ingressgateway
     release: istio
@@ -10,6 +12,8 @@ metadata:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
   labels:
     app: istio-egressgateway
     release: istio
@@ -19,6 +23,8 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
   name: istio-egressgateway-sds
   namespace: foo
 roleRef:
@@ -33,6 +39,8 @@ subjects:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
   labels:
     release: istio
   name: istio-ingressgateway-sds
