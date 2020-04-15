@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
+  labels:
+    app: istio-ingressgateway
+    release: istio
+  name: istio-ingressgateway-service-account
+  namespace: foo
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
+  labels:
+    app: istio-egressgateway
+    release: istio
+  name: istio-egressgateway-service-account
+  namespace: foo
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
+  name: istio-egressgateway-sds
+  namespace: foo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: istio-egressgateway-sds
+subjects:
+- kind: ServiceAccount
+  name: istio-egressgateway-service-account
+  namespace: foo
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    configmanagement.gke.io/managed: disabled
+  labels:
+    release: istio
+  name: istio-ingressgateway-sds
+  namespace: foo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: istio-ingressgateway-sds
+subjects:
+- kind: ServiceAccount
+  name: istio-ingressgateway-service-account
+  namespace: foo
