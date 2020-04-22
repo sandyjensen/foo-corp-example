@@ -4,5 +4,4 @@ kind: Namespace
 metadata:
   name: shipping-dev
   labels:
-    admission.gatekeeper.sh/ignore: "because-reasons"
     owner: "sandy"
