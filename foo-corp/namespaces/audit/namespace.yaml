@@ -6,3 +6,4 @@ metadata:
     test: yes-lets
   annotations:
     foo: bar
+    configmanagement.gke.io/managed: disabled
